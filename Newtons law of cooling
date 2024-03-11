@@ -1,0 +1,20 @@
+import math 
+
+Temperature_surround = float(input("enter surrounding temp:"))
+Temperature_1 = float(input("enter body temp @T1: "))
+Temperature_2 = float(input("enter body temp @T2: "))
+T2 = float(input("enter final time:"))
+temp_at_T = float(input("enter given temp at particular time T: "))
+T1 = 0
+print("assuming T1 =0")
+
+
+e = 2.7
+c = (Temperature_1-Temperature_surround)
+print(c)
+
+k = (-1/T2)*(math.log((Temperature_2 - Temperature_surround)/c))
+print(k)
+
+final_temperature = (-1/k)*(math.log((temp_at_T-Temperature_surround)/c))
+print(final_temperature)
